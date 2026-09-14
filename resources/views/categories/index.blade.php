@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head><title>Kategori Buku</title></head>
-<body style="font-family: Arial, sans-serif; padding: 20px;">
-    <h1>Daftar Kategori</h1>
+@extends('layouts.app')
+@section('title', 'Daftar Kategori')
+
+@section('content')
+    <h2>Kategori Buku</h2>
     <ul>
-        <li>Teknologi Informasi</li>
-        <li>Manajemen Bisnis</li>
-        <li>Sains & Matematika</li>
+        @foreach($categories as $category)
+            <li>{{ $category }}</li>
+        @endforeach
     </ul>
-</body>
-</html>
+@endsection

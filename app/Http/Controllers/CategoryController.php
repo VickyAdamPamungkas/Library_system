@@ -1,9 +1,8 @@
 <?php
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-
 class CategoryController extends Controller {
     public function index() {
-        return view('categories.index');
+        $categories = ['Fiksi', 'Teknologi', 'Sains', 'Sejarah', 'Biografi'];
+        return view('categories.index', compact('categories'));
     }
 }
